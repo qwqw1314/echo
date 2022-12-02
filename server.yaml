@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: control-server-deploy
+  labels:
+    app: control-server-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: control-server
+  template:
+    metadata:
+      labels:
+        app: control-server
+    spec:
+      containers:
+      - name: control-server
+        image: sejunee/server:latest
+        command: ["/bin/sh"]
+        args: ["-c", "/go/bin/echo"]
