@@ -13,6 +13,10 @@ spec:
       labels:
         app: agent 
     spec:
+      tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        operator: Exists
+        effect: NoSchedule
       containers:
       - name: agent
         image: sejunee/client:latest
