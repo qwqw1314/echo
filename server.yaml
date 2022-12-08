@@ -19,3 +19,8 @@ spec:
         image: docker.io/sejunee/server:latest
         command: ["/bin/sh"]
         args: ["-c", "/go/bin/echo"]
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "100m"
