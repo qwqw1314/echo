@@ -19,6 +19,6 @@ spec:
         effect: NoSchedule
       containers:
       - name: agent
-        image: sejunee/client:latest
+        image: docker.io/sejunee/client:latest
         command: ["/bin/sh"]
         args: ["-c", "/go/bin/agent"]

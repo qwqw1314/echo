@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: control-server
-        image: sejunee/server:latest
+        image: docker.io/sejunee/server:latest
         command: ["/bin/sh"]
         args: ["-c", "/go/bin/echo"]
